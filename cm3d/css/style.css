@@ -287,9 +287,10 @@ section h2 {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16/9;
-  object-fit: contain;
-  background: #fff;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: var(--bg);
+  mix-blend-mode: multiply;
 }
 .shot figcaption {
   padding: 10px 14px;
@@ -324,9 +325,10 @@ a.card {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16/9;
-  object-fit: contain;
-  background: #fff;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: var(--bg);
+  mix-blend-mode: multiply;
   border-radius: 10px;
 }
 .tag {
