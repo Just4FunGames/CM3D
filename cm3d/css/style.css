@@ -12,6 +12,9 @@
   --f-h: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --f-b: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   --header-bg: rgba(238, 241, 244, 0.9);
+  --footer-bg: #14181f;
+  --footer-text: #c9d0d9;
+  --footer-link: #fff;
 }
 html[data-theme="dark"] {
   color-scheme: dark;
@@ -22,6 +25,9 @@ html[data-theme="dark"] {
   --line: #384451;
   --card: #202a34;
   --header-bg: rgba(20, 26, 33, 0.92);
+  --footer-bg: #0c1117;
+  --footer-text: #c9d0d9;
+  --footer-link: #fff;
 }
 
 /* ===== Base ===== */
@@ -490,8 +496,8 @@ dialog.lb button {
 
 /* ===== Rodapé ===== */
 footer {
-  background: var(--ink);
-  color: #c9d0d9;
+  background: var(--footer-bg);
+  color: var(--footer-text);
   padding: 40px 0;
   margin-top: 40px;
   font-size: 0.92rem;
@@ -509,8 +515,12 @@ html[data-theme="dark"] .panel,
 html[data-theme="dark"] .phase-nav a {
   background: var(--card);
 }
-footer a {
+html[data-theme="dark"] nav a[aria-current="page"] {
+  background: var(--acc);
   color: #fff;
+}
+footer a {
+  color: var(--footer-link);
 }
 
 /* ===== Telemóvel ===== */
