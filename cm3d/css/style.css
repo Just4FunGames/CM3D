@@ -40,6 +40,9 @@ html {
   scroll-padding-top: 120px;
 }
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font: 17px/1.65 var(--f-b);
   color: var(--ink);
   background: var(--bg);
@@ -48,6 +51,9 @@ body {
     linear-gradient(90deg, var(--line) 1px, transparent 1px);
   background-size: 48px 48px;
   background-attachment: fixed;
+}
+main {
+  flex: 1;
 }
 body::before {
   content: "";
