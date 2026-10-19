@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/extra.css">
 </head>
 <body>
   <a class="skip" href="#main">Saltar para o conteúdo</a>
@@ -37,32 +38,75 @@
     <div class="wrap">
 
       <div class="phead">
+        <span class="tag">Grupo</span>
         <h1>Equipa</h1>
         <p>[Apresentação do grupo e da unidade curricular.]</p>
+        <div class="stats">
+          <div class="stat"><b>2</b><span>elementos</span></div>
+          <div class="stat"><b>3</b><span>fases de projeto</span></div>
+          <div class="stat"><b>1</b><span>unidade curricular</span></div>
+        </div>
       </div>
 
-      <div class="grid g2">
-        <div class="card member-card">
-          <h3>[Gabriel Esteves]</h3>
-          <p>Nº 120191 · Mestrado em Engenharia Física</p>
-          <a href="mailto:gabriel.esteves09@ua.pt">gabriel.esteves09@ua.pt</a>
+      <section id="membros">
+        <h2>Quem somos</h2>
+        <div class="team">
+
+          <article class="member">
+            <div class="avatar" aria-hidden="true">GE</div>
+            <div>
+              <h3>Gabriel Esteves</h3>
+              <p>Mestrado em Engenharia Física</p>
+              <span class="pill">Nº 120191</span>
+              <a class="mail" href="mailto:gabriel.esteves09@ua.pt">gabriel.esteves09@ua.pt</a>
+            </div>
+          </article>
+
+          <article class="member">
+            <div class="avatar" aria-hidden="true">GC</div>
+            <div>
+              <h3>Gustavo Cardoso</h3>
+              <p>Mestrado em Engenharia Física</p>
+              <span class="pill">Nº 118935</span>
+              <a class="mail" href="mailto:cardoso.gus@ua.pt">cardoso.gus@ua.pt</a>
+            </div>
+          </article>
+
         </div>
-        <div class="card member-card">
-          <h3>[Gustavo Cardoso]</h3>
-          <p>Nº 118935 · Mestrado em Engenharia Física</p>
-          <a href="mailto:cardoso.gus@ua.pt">cardoso.gus@ua.pt</a>
+      </section>
+
+      <section id="trabalho">
+        <h2>O nosso trabalho</h2>
+        <p class="lead">Explora o que desenvolvemos em cada fase.</p>
+        <div class="grid g3">
+          <a class="card" href="fase-1.html">
+            <span class="tag">Projeto</span>
+            <h3>Fase 1 · Candeeiro de pé</h3>
+            <p>Ver projeto →</p>
+          </a>
+          <a class="card" href="fase-2.html">
+            <span class="tag">Projeto</span>
+            <h3>Fase 2</h3>
+            <p>Ver projeto →</p>
+          </a>
+          <a class="card" href="fase-3.html">
+            <span class="tag">Projeto</span>
+            <h3>Fase 3</h3>
+            <p>Ver projeto →</p>
+          </a>
         </div>
-      </div>
+      </section>
 
     </div>
   </main>
 
   <footer>
     <div class="wrap">
-      <p><strong>Conceção e Modelação 3D</strong> · 2026/27 </p>
+      <p><strong>Conceção e Modelação 3D</strong> · 2026/27</p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/extra.js"></script>
 </body>
 </html>
