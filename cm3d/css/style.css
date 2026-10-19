@@ -124,20 +124,24 @@ header.top {
 .brand {
   font: 700 1.15rem var(--f-h);
   text-decoration: none;
-  display: flex;
+  display: inline-flex;
   gap: 10px;
   align-items: center;
+  white-space: nowrap;
 }
 .brand i {
-  width: 30px;
+  min-width: 52px;
   height: 30px;
+  padding: 0 8px;
   background: var(--acc);
   border-radius: 7px;
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   font: 700 0.72rem var(--f-h);
   font-style: normal;
+  box-sizing: border-box;
 }
 nav ul {
   display: flex;
