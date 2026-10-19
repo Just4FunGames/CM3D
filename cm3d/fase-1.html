@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/extra.css">
 </head>
 <body>
   <a class="skip" href="#main">Saltar para o conteúdo</a>
@@ -40,14 +41,19 @@
         <span class="tag">Fase 1</span>
         <h1>Candeeiro de pé</h1>
         <p>Modelação tridimensional do candeeiro de pé em CAD, incluindo análise estrutural, modelação individual das peças e montagem final.</p>
+        <div class="stats">
+          <div class="stat"><b>4</b><span>etapas de trabalho</span></div>
+          <div class="stat"><b>9</b><span>vistas de componentes</span></div>
+          <div class="stat"><b>3</b><span>renders da montagem</span></div>
+          <div class="stat"><b>1</b><span>montagem final</span></div>
+        </div>
       </div>
 
       <div class="phase-nav" aria-label="Nesta página">
         <a class="on" href="#objeto">Porquê este objeto?</a>
         <a href="#processo">Processo</a>
-          <a href="#estrategia">Estratégia por membro</a>
+        <a href="#estrategia">Estratégia</a>
         <a href="#resultados">Resultados</a>
-        <a href="#desenhos">Desenhos técnicos</a>
         <a href="#renders">Renders</a>
         <a href="#desafios">Principais desafios</a>
         <a href="#conclusoes">Conclusões</a>
@@ -55,74 +61,84 @@
 
       <section id="objeto">
         <h2>Porquê este objeto?</h2>
-        <div class="grid g2">
-          <figure class="shot">
-            <img src="Imagens/fase-1/objeto-original.jpg.jpeg" alt="Objeto original: candeeiro real" loading="lazy">
-            <figcaption>Objeto original</figcaption>
-          </figure>
-          <figure class="shot">
-            <img src="Imagens/fase-1/candeeiro-isometrico.jpg.jpeg" alt="Objeto modelado" loading="lazy">
-            <figcaption>Objeto modelado</figcaption>
-          </figure>
+        <div class="split">
+          <div class="compare" data-compare>
+            <img src="Imagens/fase-1/objeto-original.jpg.jpeg" alt="Fotografia do candeeiro real">
+            <div class="cmp-b"><img src="Imagens/fase-1/objeto-modelado.jpg.jpeg" alt="Modelo CAD do candeeiro"></div>
+            <span class="cmp-label l">Real</span>
+            <span class="cmp-label r">CAD</span>
+            <i class="cmp-handle"></i>
+            <input type="range" min="0" max="100" value="50" aria-label="Arrastar para comparar o objeto real com o modelo CAD">
+          </div>
+          <div class="split-text">
+            <p>Escolhemos este objeto por apresentar um nível de complexidade adequado às nossas competências atuais em CAD. Como já tínhamos tido algum contacto com o software, mas apenas ao nível dos conceitos básicos, optámos por um objeto mais simples, que nos permitisse consolidar os conhecimentos adquiridos e melhorar a nossa capacidade de modelação tridimensional.</p>
+            <p>Apesar da sua simplicidade, o candeeiro apresenta diferentes geometrias e componentes, como a base circular, a haste curva e o suporte da lâmpada, permitindo explorar diferentes ferramentas de modelação. Desta forma, conseguimos desenvolver um projeto acessível, mas que ainda nos desafia a aplicar os conhecimentos de CAD e a representar corretamente um objeto real.</p>
+          </div>
         </div>
-        <p>Escolhemos este objeto por apresentar um nível de complexidade adequado às nossas competências atuais em CAD. Como já tínhamos tido algum contacto com o software, mas apenas ao nível dos conceitos básicos, optámos por um objeto mais simples, que nos permitisse consolidar os conhecimentos adquiridos e melhorar a nossa capacidade de modelação tridimensional.</p>
-        <p>Apesar da sua simplicidade, o candeeiro apresenta diferentes geometrias e componentes, como a base circular, a haste curva e o suporte da lâmpada, permitindo explorar diferentes ferramentas de modelação. Desta forma, conseguimos desenvolver um projeto acessível, mas que ainda nos desafia a aplicar os conhecimentos de CAD e a representar corretamente um objeto real.</p>
       </section>
 
       <section id="processo">
         <h2>Processo</h2>
-        <ol class="steps">
-          <li><strong>Passo 1:</strong> Escolha do Objeto - Seleção do candeeiro de pé com base na complexidade e variedade de formas geométricas.</li>
-          <li><strong>Passo 2:</strong> Análise Estrutural - Estudo das componentes, proporções e planeamento do processo de modelação.</li>
-          <li><strong>Passo 3:</strong> Modelação Individual - Modelação CAD tridimensional de cada componente do candeeiro de forma individual.</li>
-          <li><strong>Passo 4:</strong> Montagem (Assembly) - Junção e alinhamento de todas as peças modeladas num único objeto final (Assembly).</li>
+        <ol class="steps flow">
+          <li><strong>Escolha do objeto</strong><p>Seleção do candeeiro de pé com base na complexidade e variedade de formas geométricas.</p></li>
+          <li><strong>Análise estrutural</strong><p>Estudo das componentes, proporções e planeamento do processo de modelação.</p></li>
+          <li><strong>Modelação individual</strong><p>Modelação CAD tridimensional de cada componente do candeeiro de forma individual.</p></li>
+          <li><strong>Montagem (Assembly)</strong><p>Junção e alinhamento de todas as peças modeladas num único objeto final.</p></li>
         </ol>
       </section>
 
       <section id="estrategia">
-        <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1">
-          <h3>Estratégia de modelação</h3>
-          <p>Modelação de sólidos e superfícies usando principalmente Extrude Boss, Extrude Cut, Hole Wizard, Swept Boss e Fillet. O principal desafio foi o encaixe preciso entre peças, superado com restrições geométricas e rigor dimensional.</p>
-        </div>
-        <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
-          <h3>Estratégia de modelação</h3>
-          <p>Modelação de sólidos e superfícies usando principalmente Extrude Boss, Extrude Cut, Hole Wizard, Swept Boss e Fillet. O principal desafio foi o encaixe preciso entre peças, superado com restrições geométricas e rigor dimensional.</p>
+        <h2>Estratégia de modelação</h2>
+        <div class="callout">
+          <p>Modelação de sólidos e superfícies usando principalmente as ferramentas abaixo. O principal desafio foi o encaixe preciso entre peças, superado com restrições geométricas e rigor dimensional.</p>
+          <span class="pill">Extrude Boss</span><span class="pill">Extrude Cut</span><span class="pill">Hole Wizard</span><span class="pill">Swept Boss</span><span class="pill">Fillet</span>
         </div>
       </section>
 
       <section id="resultados">
         <h2>Resultados</h2>
         <p class="lead">Componentes modelados individualmente, antes da montagem.</p>
+        <div class="chips" role="group" aria-label="Filtrar componentes">
+          <button class="chip on" data-f="all" aria-pressed="true">Todos</button>
+          <button class="chip" data-f="lampada" aria-pressed="false">Lâmpada</button>
+          <button class="chip" data-f="suporte" aria-pressed="false">Suporte</button>
+          <button class="chip" data-f="base" aria-pressed="false">Base</button>
+          <button class="chip" data-f="haste" aria-pressed="false">Haste</button>
+        </div>
         <div class="grid g3">
-          <figure class="shot"><img src="Imagens/fase-1/lampada-vista-lateral.jpg.jpeg" alt="Lâmpada, vista lateral" loading="lazy"><figcaption>Lâmpada · vista lateral</figcaption></figure>
-          <figure class="shot"><img src="Imagens/fase-1/lampada-vista-inferior.jpg.jpeg" alt="Lâmpada, vista inferior" loading="lazy"><figcaption>Lâmpada · vista inferior</figcaption></figure>
-          <figure class="shot"><img src="Imagens/fase-1/suporte-lampada-01.jpg.jpeg" alt="Suporte da lâmpada, vista 1" loading="lazy"><figcaption>Suporte da lâmpada · vista 1</figcaption></figure>
-          <figure class="shot"><img src="Imagens/fase-1/suporte-lampada-02.jpg.jpeg" alt="Suporte da lâmpada, vista 2" loading="lazy"><figcaption>Suporte da lâmpada · vista 2</figcaption></figure>
-          <figure class="shot"><img src="Imagens/fase-1/base-01.jpg.jpeg" alt="Base, vista 1" loading="lazy"><figcaption>Base · vista 1</figcaption></figure>
-          <figure class="shot"><img src="Imagens/fase-1/base-02.jpg.jpeg" alt="Base, vista 2" loading="lazy"><figcaption>Base · vista 2</figcaption></figure>
-          <figure class="shot"><img src="Imagens/fase-1/base-vista-inferior.jpg.jpeg" alt="Peça da base, vista inferior" loading="lazy"><figcaption>Peça da base · vista inferior</figcaption></figure>
-          <figure class="shot"><img src="Imagens/fase-1/haste-01.jpg.jpeg" alt="Haste, vista 1" loading="lazy"><figcaption>Haste · vista 1</figcaption></figure>
-          <figure class="shot"><img src="Imagens/fase-1/haste-02.jpg.jpeg" alt="Haste, vista 2" loading="lazy"><figcaption>Haste · vista 2</figcaption></figure>
+          <figure class="shot" data-g="lampada"><img src="Imagens/fase-1/lampada-vista-lateral.jpg.jpeg" alt="Lâmpada · vista lateral" loading="lazy"><figcaption>Lâmpada · vista lateral</figcaption></figure>
+          <figure class="shot" data-g="lampada"><img src="Imagens/fase-1/lampada-vista-inferior.jpg.jpeg" alt="Lâmpada · vista inferior" loading="lazy"><figcaption>Lâmpada · vista inferior</figcaption></figure>
+          <figure class="shot" data-g="suporte"><img src="Imagens/fase-1/suporte-lampada-01.jpg.jpeg" alt="Suporte da lâmpada · vista 1" loading="lazy"><figcaption>Suporte da lâmpada · vista 1</figcaption></figure>
+          <figure class="shot" data-g="suporte"><img src="Imagens/fase-1/suporte-lampada-02.jpg.jpeg" alt="Suporte da lâmpada · vista 2" loading="lazy"><figcaption>Suporte da lâmpada · vista 2</figcaption></figure>
+          <figure class="shot" data-g="base"><img src="Imagens/fase-1/base-01.jpg.jpeg" alt="Base · vista 1" loading="lazy"><figcaption>Base · vista 1</figcaption></figure>
+          <figure class="shot" data-g="base"><img src="Imagens/fase-1/base-02.jpg.jpeg" alt="Base · vista 2" loading="lazy"><figcaption>Base · vista 2</figcaption></figure>
+          <figure class="shot" data-g="base"><img src="Imagens/fase-1/base-vista-inferior.jpg.jpeg" alt="Peça da base · vista inferior" loading="lazy"><figcaption>Peça da base · vista inferior</figcaption></figure>
+          <figure class="shot" data-g="haste"><img src="Imagens/fase-1/haste-01.jpg.jpeg" alt="Haste · vista 1" loading="lazy"><figcaption>Haste · vista 1</figcaption></figure>
+          <figure class="shot" data-g="haste"><img src="Imagens/fase-1/haste-02.jpg.jpeg" alt="Haste · vista 2" loading="lazy"><figcaption>Haste · vista 2</figcaption></figure>
         </div>
       </section>
 
       <section id="renders">
         <h2>Renders</h2>
         <div class="grid g3">
-          <figure class="shot"><img src="Imagens/fase-1/candeeiro-isometrico.jpg.jpeg" alt="Candeeiro, vista isométrica" loading="lazy"><figcaption>Candeeiro · vista isométrica</figcaption></figure>
-          <figure class="shot"><img src="Imagens/fase-1/candeeiro-frente.jpg.jpeg" alt="Candeeiro, vista frontal" loading="lazy"><figcaption>Candeeiro · vista frontal</figcaption></figure>
-          <figure class="shot"><img src="Imagens/fase-1/candeeiro-lateral.jpg.jpeg" alt="Candeeiro, vista lateral" loading="lazy"><figcaption>Candeeiro · vista lateral</figcaption></figure>
+          <figure class="shot"><img src="Imagens/fase-1/candeeiro-isometrico.jpg.jpeg" alt="Candeeiro · vista isométrica" loading="lazy"><figcaption>Candeeiro · vista isométrica</figcaption></figure>
+          <figure class="shot"><img src="Imagens/fase-1/candeeiro-frente.jpg.jpeg" alt="Candeeiro · vista frontal" loading="lazy"><figcaption>Candeeiro · vista frontal</figcaption></figure>
+          <figure class="shot"><img src="Imagens/fase-1/candeeiro-lateral.jpg.jpeg" alt="Candeeiro · vista lateral" loading="lazy"><figcaption>Candeeiro · vista lateral</figcaption></figure>
         </div>
       </section>
 
       <section id="desafios">
         <h2>Principais desafios</h2>
-        <p class="lead">O maior desafio do projeto foi a reaprendizagem e reativação das competências em software CAD. Destacaram-se, em particular, a criação de roscas e o processo de montagem (Assembly).</p>
+        <div class="callout">
+          <p>O maior desafio do projeto foi a reaprendizagem e reativação das competências em software CAD. Destacaram-se, em particular, a criação de roscas e o processo de montagem (Assembly).</p>
+        </div>
       </section>
 
       <section id="conclusoes">
         <h2>Conclusões</h2>
-        <p class="lead">A realização deste trabalho permitiu ao grupo recuperar o ritmo de trabalho em CAD. Para otimizar o processo e ultrapassar dificuldades técnicas, recorremos ao estudo de tutoriais, o que facilitou significativamente a modelação e a montagem das peças.</p>
+        <div class="callout">
+          <p>A realização deste trabalho permitiu ao grupo recuperar o ritmo de trabalho em CAD. Para otimizar o processo e ultrapassar dificuldades técnicas, recorremos ao estudo de tutoriais, o que facilitou significativamente a modelação e a montagem das peças.</p>
+        </div>
       </section>
 
       <div class="pager">
@@ -140,5 +156,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/extra.js"></script>
 </body>
 </html>
