@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/extra.css">
 </head>
 <body>
   <a class="skip" href="#main">Saltar para o conteúdo</a>
@@ -37,40 +38,58 @@
     <div class="wrap">
 
       <div class="phead">
+        <span class="tag">Portefólio</span>
         <h1>Projetos</h1>
-        <p>Explora todos os projetos desenvolvidos pelo grupo.</p>
+        <p>Explora todos os projetos desenvolvidos pelo grupo ao longo das três fases.</p>
+        <div class="stats">
+          <div class="stat"><b>3</b><span>fases de projeto</span></div>
+          <div class="stat"><b>1</b><span>fase disponível</span></div>
+          <div class="stat"><b>2</b><span>elementos no grupo</span></div>
+        </div>
       </div>
 
-      <div class="grid g3">
-        <a class="card" href="fase-1.html">
-          <img class="cover" src="Imagens/fase-1/candeeiro-isometrico.jpg.jpeg" alt="Candeeiro de pé modelado em 3D">
-          <span class="tag">Fase 1</span>
-          <h3>Candeeiro de pé</h3>
-          <p>[Resumo de uma frase sobre o que foi modelado.]</p>
-        </a>
-        <a class="card" href="fase-2.html">
-          <div class="ph" role="img" aria-label="Espaço reservado: imagem de capa">Imagem de capa</div>
-          <span class="tag">Fase 2</span>
-          <h3>[Objeto da fase 2]</h3>
-          <p>[Resumo de uma frase sobre o que foi modelado.]</p>
-        </a>
-        <a class="card" href="fase-3.html">
-          <div class="ph" role="img" aria-label="Espaço reservado: imagem de capa">Imagem de capa</div>
-          <span class="tag">Fase 3</span>
-          <h3>[Objeto da fase 3]</h3>
-          <p>[Resumo de uma frase sobre o que foi modelado.]</p>
-        </a>
-      </div>
+      <section id="fases">
+        <h2>Todas as fases</h2>
+        <div class="grid g3">
+          <a class="card" href="fase-1.html">
+            <img class="cover" src="Imagens/fase-1/candeeiro-isometrico.jpg.jpeg" alt="Candeeiro de pé modelado em 3D">
+            <div class="card-head"><span class="tag">Fase 1</span><span class="status on">Disponível</span></div>
+            <h3>Candeeiro de pé</h3>
+            <p>[Resumo de uma frase sobre o que foi modelado.]</p>
+          </a>
+          <a class="card" href="fase-2.html">
+            <div class="ph" role="img" aria-label="Espaço reservado: imagem de capa">Imagem de capa</div>
+            <div class="card-head"><span class="tag">Fase 2</span><span class="status">Em preparação</span></div>
+            <h3>[Objeto da fase 2]</h3>
+            <p>[Resumo de uma frase sobre o que foi modelado.]</p>
+          </a>
+          <a class="card" href="fase-3.html">
+            <div class="ph" role="img" aria-label="Espaço reservado: imagem de capa">Imagem de capa</div>
+            <div class="card-head"><span class="tag">Fase 3</span><span class="status">Em preparação</span></div>
+            <h3>[Objeto da fase 3]</h3>
+            <p>[Resumo de uma frase sobre o que foi modelado.]</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="ferramentas">
+        <h2>Ferramentas de modelação</h2>
+        <div class="callout">
+          <p>Principais ferramentas de CAD utilizadas na modelação de sólidos e superfícies, na Fase 1.</p>
+          <span class="pill">Extrude Boss</span><span class="pill">Extrude Cut</span><span class="pill">Hole Wizard</span><span class="pill">Swept Boss</span><span class="pill">Fillet</span>
+        </div>
+      </section>
 
     </div>
   </main>
 
   <footer>
     <div class="wrap">
-      <p><strong>Conceção e Modelação 3D</strong> · 2026/27 </p>
+      <p><strong>Conceção e Modelação 3D</strong> · 2026/27</p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/extra.js"></script>
 </body>
 </html>
