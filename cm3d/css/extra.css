@@ -53,3 +53,12 @@
 @media (prefers-reduced-motion: reduce) {
   .js .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+.pill {
+  background: var(--card);
+  color: var(--ink);
+}
+.steps.flow li {
+  background: var(--card);
+  color: var(--ink);
+}
