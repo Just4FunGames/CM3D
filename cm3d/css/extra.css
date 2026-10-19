@@ -76,3 +76,14 @@
   .member { padding: 20px; gap: 16px; }
   .avatar { width: 68px; height: 68px; font-size: 1.5rem; }
 }
+
+/* ===== Página inicial ===== */
+.hero .tag { display: inline-block; margin-bottom: 14px; padding: 4px 12px; border: 1px solid var(--line); border-radius: 99px; background: var(--card); }
+.card-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.status { font-size: .78rem; font-weight: 600; padding: 3px 10px; border-radius: 99px; border: 1px solid var(--line); color: var(--mut); }
+.status.on { background: var(--acc); border-color: var(--acc); color: #fff; }
+.cta { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; background: var(--acc); color: #fff; border-radius: var(--r); padding: 36px 40px; }
+.cta h2 { margin-bottom: 6px; }
+.cta p { opacity: .92; }
+.cta .btn { background: #fff; color: #14181f; }
+.cta .btn:hover { background: #14181f; color: #fff; }
