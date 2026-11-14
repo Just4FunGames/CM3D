@@ -45,7 +45,7 @@
           <div class="stat"><b>4</b><span>etapas de trabalho</span></div>
           <div class="stat"><b>22</b><span>vistas de modelação</span></div>
           <div class="stat"><b>4</b><span>grupos de peças</span></div>
-          <div class="stat"><b>2</b><span>renders da montagem</span></div>
+          <div class="stat"><b>2</b><span>vistas da montagem final</span></div>
         </div>
       </div>
 
@@ -54,6 +54,7 @@
         <a href="#processo">Processo</a>
         <a href="#estrategia">Estratégia</a>
         <a href="#resultados">Resultados</a>
+        <a href="#montagemfinal">Montagem Final</a>
         <a href="#renders">Renders</a>
         <a href="#desafios">Principais desafios</a>
         <a href="#conclusoes">Conclusões</a>
@@ -62,7 +63,14 @@
       <section id="objeto">
         <h2>Porquê este objeto?</h2>
         <div class="split">
-          <div class="ph tall" role="img" aria-label="Espaço reservado: fotografia do objeto original">Fotografia do objeto original</div>
+          <div class="compare" data-compare>
+            <img src="Imagens/fase-2/objeto-original.jpg" alt="Fotografia do secador de cabelo real">
+            <div class="cmp-b"><img src="Imagens/fase-2/objeto-modelado.jpg" alt="Modelo CAD do secador de cabelo"></div>
+            <span class="cmp-label l">Real</span>
+            <span class="cmp-label r">CAD</span>
+            <i class="cmp-handle"></i>
+            <input type="range" min="0" max="100" value="50" aria-label="Arrastar para comparar o objeto real com o modelo CAD">
+          </div>
           <div class="split-text">
             <p>[Razões da escolha: complexidade, geometrias, competências do grupo.]</p>
             <p>[Que geometrias e componentes do objeto permitiram explorar diferentes ferramentas de modelação.]</p>
@@ -123,12 +131,19 @@
         </div>
       </section>
 
-      <section id="renders">
-        <h2>Renders</h2>
-        <p class="lead">Montagem final do secador.</p>
+      <section id="montagemfinal">
+        <h2>Montagem Final</h2>
         <div class="grid g2" style="max-width:740px">
           <figure class="shot"><img src="Imagens/fase-2/secador-render-01.jpg" alt="Secador de cabelo, vista da saída de ar" loading="lazy"><figcaption>Secador · vista da saída de ar</figcaption></figure>
           <figure class="shot"><img src="Imagens/fase-2/secador-render-02.jpg" alt="Secador de cabelo, vista da entrada de ar" loading="lazy"><figcaption>Secador · vista da entrada de ar</figcaption></figure>
+        </div>
+      </section>
+
+      <section id="renders">
+        <h2>Renders</h2>
+        <div class="grid g2" style="max-width:740px">
+          <div class="ph" role="img" aria-label="Espaço reservado: render 1">Render 1</div>
+          <div class="ph" role="img" aria-label="Espaço reservado: render 2">Render 2</div>
         </div>
       </section>
 
