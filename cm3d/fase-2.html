@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fase 2 | CM3D 25/26</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/extra.css">
 </head>
-
 <body>
   <a class="skip" href="#main">Saltar para o conteúdo</a>
 
@@ -34,8 +30,7 @@
           <li><a href="equipa.html">Equipa</a></li>
         </ul>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Mudar para tema escuro">Tema
-        escuro</button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Mudar para tema escuro">Tema escuro</button>
     </div>
   </header>
 
@@ -74,13 +69,11 @@
         <div class="split">
           <div class="compare" data-compare>
             <img src="Imagens/fase-2/objeto-original.jpg" alt="Fotografia do secador de cabelo real">
-            <div class="cmp-b"><img src="Imagens/fase-2/objeto-modelado.jpg" alt="Modelo CAD do secador de cabelo">
-            </div>
+            <div class="cmp-b"><img src="Imagens/fase-2/objeto-modelado.jpg" alt="Modelo CAD do secador de cabelo"></div>
             <span class="cmp-label l">Real</span>
             <span class="cmp-label r">CAD</span>
             <i class="cmp-handle"></i>
-            <input type="range" min="0" max="100" value="50"
-              aria-label="Arrastar para comparar o objeto real com o modelo CAD">
+            <input type="range" min="0" max="100" value="50" aria-label="Arrastar para comparar o objeto real com o modelo CAD">
           </div>
           <div class="split-text">
             <p>Depois do candeeiro da fase 1, queríamos um objeto mais exigente, mas que ainda estivesse ao nosso
@@ -117,14 +110,24 @@
 
       <section id="estrategia">
         <h2>Estratégia de modelação</h2>
-        <div class="callout">
-          <p>A nossa estratégia foi modelar cada peça isoladamente, a partir das medidas que tirámos, e só depois
-            juntá-las. Usámos ferramentas de sólidos e de superfícies, como Extrude Boss/Cut, Revolve, Loft, Sweep,
-            Helix, Fillet e Hole Wizard.</p>
-          <p>Várias peças têm elementos repetidos: os furos hexagonais da parte traseira, as ranhuras do anel, os anéis
-            e raios da grelha e as pás da ventoinha. Em vez de desenhar cada um, usámos padrões lineares e circulares, o
-            que poupou tempo e garantiu simetria. A pega foi modelada em duas metades, como no objeto real, com furos
-            para parafusos.</p>
+        <div class="grid g2">
+          <div class="callout">
+            <span class="tag">Abordagem</span>
+            <p>A nossa estratégia foi modelar cada peça isoladamente, a partir das medidas que tirámos, e só depois
+              juntá-las. Usámos ferramentas de sólidos e de superfícies, como Extrude Boss/Cut, Revolve, Loft, Sweep,
+              Helix, Fillet e Hole Wizard.</p>
+          </div>
+          <div class="callout">
+            <span class="tag">Elementos repetidos</span>
+            <p>Várias peças têm elementos repetidos: os furos hexagonais da parte traseira, as ranhuras do anel, os anéis
+              e raios da grelha e as pás da ventoinha. Em vez de desenhar cada um, usámos padrões lineares e circulares, o
+              que poupou tempo e garantiu simetria. A pega foi modelada em duas metades, como no objeto real, com furos
+              para parafusos.</p>
+          </div>
+        </div>
+        <div class="tools">
+          <span class="tools-label">Ferramentas</span>
+          <span class="pill">Extrude Boss</span><span class="pill">Extrude Cut</span><span class="pill">Revolve</span><span class="pill">Loft</span><span class="pill">Sweep</span><span class="pill">Helix</span><span class="pill">Fillet</span><span class="pill">Hole Wizard</span>
         </div>
       </section>
 
@@ -182,42 +185,61 @@
 
       <section id="desafios">
         <h2>Principais desafios</h2>
-        <div class="callout">
-          <p><strong>Resistência (coils).</strong> Foi a peça mais difícil de todo o projeto. É uma hélice com centenas
-            de espiras enroladas à volta de uma estrutura em cruz de 6 braços, e tem de ficar certa tanto na forma como
-            na posição em relação ao resto. Era também a peça mais pesada para o computador, o que tornava cada
-            alteração lenta.</p>
-          <p><strong>Medir com rigor.</strong> Mesmo com paquímetro e régua, não conseguimos medir tudo a 100%: algumas
-            peças são pequenas, curvas ou têm cantos arredondados. Acabámos por arredondar várias medidas. Parecia pouco
-            importante, mas no assembly esses pequenos arredondamentos somaram-se e as peças não encaixavam bem. Foi a
-            nossa maior lição: um desvio de décimas de milímetro numa peça pode tornar a montagem impossível.</p>
-          <p><strong>Peças feitas ao contrário.</strong> Um erro frequente foi modelarmos uma peça meio invertida. Como
-            o secador era real, conseguíamos perceber que algo estava mal, mas só quando a peça não encaixava no
-            assembly é que descobríamos que estava ao contrário. Corrigi-lo implicava voltar atrás e refazer partes da
-            peça.</p>
-          <p><strong>Assembly.</strong> Juntar as peças foi, por tudo isto, uma das fases mais difíceis. Resolvemos
-            montando por subconjuntos (ventoinha, interior, carcaça) e voltando às peças para corrigir as medidas.</p>
-          <p><strong>Render.</strong> O render foi o outro grande desafio. Nunca tínhamos usado o Blender, por isso
-            tivemos de aprender tudo de raiz: a interface, a forma de aplicar materiais, a iluminação e a posição da
-            câmara. Os primeiros resultados ficaram longe do que queríamos, e foi preciso experimentar e ajustar várias
-            vezes até chegarmos aos renders finais. Foi um desafio, mas deu muito gosto ver o secador com aspeto
-            realista.</p>
+        <div class="challenges">
+          <article class="challenge">
+            <p><strong>Resistência (coils).</strong> Foi a peça mais difícil de todo o projeto. É uma hélice com centenas
+              de espiras enroladas à volta de uma estrutura em cruz de 6 braços, e tem de ficar certa tanto na forma como
+              na posição em relação ao resto. Era também a peça mais pesada para o computador, o que tornava cada
+              alteração lenta.</p>
+          </article>
+          <article class="challenge">
+            <p><strong>Medir com rigor.</strong> Mesmo com paquímetro e régua, não conseguimos medir tudo a 100%: algumas
+              peças são pequenas, curvas ou têm cantos arredondados. Acabámos por arredondar várias medidas. Parecia pouco
+              importante, mas no assembly esses pequenos arredondamentos somaram-se e as peças não encaixavam bem. Foi a
+              nossa maior lição: um desvio de décimas de milímetro numa peça pode tornar a montagem impossível.</p>
+          </article>
+          <article class="challenge">
+            <p><strong>Peças feitas ao contrário.</strong> Um erro frequente foi modelarmos uma peça meio invertida. Como
+              o secador era real, conseguíamos perceber que algo estava mal, mas só quando a peça não encaixava no
+              assembly é que descobríamos que estava ao contrário. Corrigi-lo implicava voltar atrás e refazer partes da
+              peça.</p>
+          </article>
+          <article class="challenge">
+            <p><strong>Assembly.</strong> Juntar as peças foi, por tudo isto, uma das fases mais difíceis. Resolvemos
+              montando por subconjuntos (ventoinha, interior, carcaça) e voltando às peças para corrigir as medidas.</p>
+          </article>
+          <article class="challenge">
+            <p><strong>Render.</strong> O render foi o outro grande desafio. Nunca tínhamos usado o Blender, por isso
+              tivemos de aprender tudo de raiz: a interface, a forma de aplicar materiais, a iluminação e a posição da
+              câmara. Os primeiros resultados ficaram longe do que queríamos, e foi preciso experimentar e ajustar várias
+              vezes até chegarmos aos renders finais. Foi um desafio, mas deu muito gosto ver o secador com aspeto
+              realista.</p>
+          </article>
         </div>
       </section>
 
       <section id="conclusoes">
         <h2>Conclusões</h2>
-        <div class="callout">
-          <p>Esta fase fez-nos modelar um objeto real com imperfeições e limites de medição. Aprendemos que a precisão
-            das medidas e a qualidade de cada peça determinam o sucesso da montagem, e que pequenos arredondamentos, que
-            parecem inofensivos numa peça isolada, tornam-se um problema quando as peças têm de encaixar.</p>
-          <p>Comparando com a fase 1, evoluímos bastante. Modelámos geometrias mais complexas, usámos padrões para
-            elementos repetidos, trabalhámos com um mecanismo articulado e aprendemos do zero a fazer renders em
-            Blender. Ficámos também mais atentos ao planeamento como perceber como o objeto se monta antes de começar a
-            modelar.</p>
-          <p>Se repetíssemos o projeto, mediríamos com mais cuidado e registaríamos todas as medidas desde o início, e
-            testaríamos o assembly mais cedo, com as peças ainda simplificadas, para detetar erros antes de gastar tempo
-            no detalhe.</p>
+        <div class="grid g3">
+          <div class="callout">
+            <span class="tag">O que aprendemos</span>
+            <p>Esta fase fez-nos modelar um objeto real com imperfeições e limites de medição. Aprendemos que a precisão
+              das medidas e a qualidade de cada peça determinam o sucesso da montagem, e que pequenos arredondamentos, que
+              parecem inofensivos numa peça isolada, tornam-se um problema quando as peças têm de encaixar.</p>
+          </div>
+          <div class="callout">
+            <span class="tag">Evolução face à fase 1</span>
+            <p>Comparando com a fase 1, evoluímos bastante. Modelámos geometrias mais complexas, usámos padrões para
+              elementos repetidos, trabalhámos com um mecanismo articulado e aprendemos do zero a fazer renders em
+              Blender. Ficámos também mais atentos ao planeamento como perceber como o objeto se monta antes de começar a
+              modelar.</p>
+          </div>
+          <div class="callout">
+            <span class="tag">O que faríamos de diferente</span>
+            <p>Se repetíssemos o projeto, mediríamos com mais cuidado e registaríamos todas as medidas desde o início, e
+              testaríamos o assembly mais cedo, com as peças ainda simplificadas, para detetar erros antes de gastar tempo
+              no detalhe.</p>
+          </div>
         </div>
       </section>
 
@@ -239,5 +261,4 @@
   <script src="js/main.js"></script>
   <script src="js/extra.js"></script>
 </body>
-
 </html>
