@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fase 2 | CM3D 25/26</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/extra.css">
 </head>
+
 <body>
   <a class="skip" href="#main">Saltar para o conteúdo</a>
 
@@ -30,7 +34,8 @@
           <li><a href="equipa.html">Equipa</a></li>
         </ul>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Mudar para tema escuro">Tema escuro</button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Mudar para tema escuro">Tema
+        escuro</button>
     </div>
   </header>
 
@@ -40,7 +45,11 @@
       <div class="phead">
         <span class="tag">Fase 2</span>
         <h1>Secador de cabelo</h1>
-        <p>[Resumo do que foi feito nesta fase.]</p>
+        <p>
+          Nesta fase modelámos um secador de cabelo , a partir de um secador real que medimos peça a peça. Passámos de
+          um candeeiro com poucas peças para um objeto com mecanismo, resistência, ventoinha e carcaça, onde cada
+          milímetro conta. Terminámos com a montagem em SolidWorks e renders feitos em Blender.
+        </p>
         <div class="stats">
           <div class="stat"><b>4</b><span>etapas de trabalho</span></div>
           <div class="stat"><b>22</b><span>vistas de modelação</span></div>
@@ -65,15 +74,23 @@
         <div class="split">
           <div class="compare" data-compare>
             <img src="Imagens/fase-2/objeto-original.jpg" alt="Fotografia do secador de cabelo real">
-            <div class="cmp-b"><img src="Imagens/fase-2/objeto-modelado.jpg" alt="Modelo CAD do secador de cabelo"></div>
+            <div class="cmp-b"><img src="Imagens/fase-2/objeto-modelado.jpg" alt="Modelo CAD do secador de cabelo">
+            </div>
             <span class="cmp-label l">Real</span>
             <span class="cmp-label r">CAD</span>
             <i class="cmp-handle"></i>
-            <input type="range" min="0" max="100" value="50" aria-label="Arrastar para comparar o objeto real com o modelo CAD">
+            <input type="range" min="0" max="100" value="50"
+              aria-label="Arrastar para comparar o objeto real com o modelo CAD">
           </div>
           <div class="split-text">
-            <p>[Razões da escolha: complexidade, geometrias, competências do grupo.]</p>
-            <p>[Que geometrias e componentes do objeto permitiram explorar diferentes ferramentas de modelação.]</p>
+            <p>Depois do candeeiro da fase 1, queríamos um objeto mais exigente, mas que ainda estivesse ao nosso
+              alcance. O secador de cabelo pareceu-nos o equilíbrio certo pois é um objeto do dia a dia, e por dentro
+              tem muito mais peças do que se imagina.</p>
+            <p>Escolhemo-lo por reunir geometrias muito diferentes: pás de ventoinha, uma grelha de anéis e raios, uma
+              carcaça com centenas de furos hexagonais, uma pega articulada em duas metades e uma resistência em hélice.
+              Cada uma pedia uma abordagem diferente, o que nos obrigou a sair da zona de conforto.</p>
+            <p>Houve ainda uma razão prática: tínhamos um secador real para desmontar e medir, o que nos permitiu
+              comparar sempre o modelo com o objeto e perceber melhor como as peças encaixam na realidade.</p>
           </div>
         </div>
       </section>
@@ -81,17 +98,33 @@
       <section id="processo">
         <h2>Processo</h2>
         <ol class="steps flow">
-          <li><strong>[Passo 1]</strong><p>[Descrição do passo.]</p></li>
-          <li><strong>[Passo 2]</strong><p>[Descrição do passo.]</p></li>
-          <li><strong>[Passo 3]</strong><p>[Descrição do passo.]</p></li>
-          <li><strong>[Passo 4]</strong><p>[Descrição do passo.]</p></li>
+          <li><strong>Escolha e medição do objeto</strong>
+            <p>Escolhemos o secador e medimo-lo com paquímetro e régua, peça a peça.</p>
+          </li>
+          <li><strong>Análise e divisão em peças</strong>
+            <p>Estudámos como o secador se monta e dividimo-lo em grupos: ventoinha, peça em cobre, peça cinzenta e
+              carcaça.</p>
+          </li>
+          <li><strong>Modelação individual</strong>
+            <p>Modelámos cada peça separadamente em SolidWorks. Começámos pelas mais complicadas, como a resistência e a
+              ventoinha.</p>
+          </li>
+          <li><strong>Montagem e render</strong>
+            <p>Juntámos tudo no assembly e fizemos os renders finais em Blender.</p>
+          </li>
         </ol>
       </section>
 
       <section id="estrategia">
         <h2>Estratégia de modelação</h2>
         <div class="callout">
-          <p>[Ferramentas de CAD usadas, forma de modelar as peças e como foram resolvidos os encaixes.]</p>
+          <p>A nossa estratégia foi modelar cada peça isoladamente, a partir das medidas que tirámos, e só depois
+            juntá-las. Usámos ferramentas de sólidos e de superfícies, como Extrude Boss/Cut, Revolve, Loft, Sweep,
+            Helix, Fillet e Hole Wizard.</p>
+          <p>Várias peças têm elementos repetidos: os furos hexagonais da parte traseira, as ranhuras do anel, os anéis
+            e raios da grelha e as pás da ventoinha. Em vez de desenhar cada um, usámos padrões lineares e circulares, o
+            que poupou tempo e garantiu simetria. A pega foi modelada em duas metades, como no objeto real, com furos
+            para parafusos.</p>
         </div>
       </section>
 
@@ -150,14 +183,41 @@
       <section id="desafios">
         <h2>Principais desafios</h2>
         <div class="callout">
-          <p>[Dificuldades encontradas e como foram resolvidas.]</p>
+          <p><strong>Resistência (coils).</strong> Foi a peça mais difícil de todo o projeto. É uma hélice com centenas
+            de espiras enroladas à volta de uma estrutura em cruz de 6 braços, e tem de ficar certa tanto na forma como
+            na posição em relação ao resto. Era também a peça mais pesada para o computador, o que tornava cada
+            alteração lenta.</p>
+          <p><strong>Medir com rigor.</strong> Mesmo com paquímetro e régua, não conseguimos medir tudo a 100%: algumas
+            peças são pequenas, curvas ou têm cantos arredondados. Acabámos por arredondar várias medidas. Parecia pouco
+            importante, mas no assembly esses pequenos arredondamentos somaram-se e as peças não encaixavam bem. Foi a
+            nossa maior lição: um desvio de décimas de milímetro numa peça pode tornar a montagem impossível.</p>
+          <p><strong>Peças feitas ao contrário.</strong> Um erro frequente foi modelarmos uma peça meio invertida. Como
+            o secador era real, conseguíamos perceber que algo estava mal, mas só quando a peça não encaixava no
+            assembly é que descobríamos que estava ao contrário. Corrigi-lo implicava voltar atrás e refazer partes da
+            peça.</p>
+          <p><strong>Assembly.</strong> Juntar as peças foi, por tudo isto, uma das fases mais difíceis. Resolvemos
+            montando por subconjuntos (ventoinha, interior, carcaça) e voltando às peças para corrigir as medidas.</p>
+          <p><strong>Render.</strong> O render foi o outro grande desafio. Nunca tínhamos usado o Blender, por isso
+            tivemos de aprender tudo de raiz: a interface, a forma de aplicar materiais, a iluminação e a posição da
+            câmara. Os primeiros resultados ficaram longe do que queríamos, e foi preciso experimentar e ajustar várias
+            vezes até chegarmos aos renders finais. Foi um desafio, mas deu muito gosto ver o secador com aspeto
+            realista.</p>
         </div>
       </section>
 
       <section id="conclusoes">
         <h2>Conclusões</h2>
         <div class="callout">
-          <p>[O que o grupo aprendeu e o que faria de forma diferente.]</p>
+          <p>Esta fase fez-nos modelar um objeto real com imperfeições e limites de medição. Aprendemos que a precisão
+            das medidas e a qualidade de cada peça determinam o sucesso da montagem, e que pequenos arredondamentos, que
+            parecem inofensivos numa peça isolada, tornam-se um problema quando as peças têm de encaixar.</p>
+          <p>Comparando com a fase 1, evoluímos bastante. Modelámos geometrias mais complexas, usámos padrões para
+            elementos repetidos, trabalhámos com um mecanismo articulado e aprendemos do zero a fazer renders em
+            Blender. Ficámos também mais atentos ao planeamento como perceber como o objeto se monta antes de começar a
+            modelar.</p>
+          <p>Se repetíssemos o projeto, mediríamos com mais cuidado e registaríamos todas as medidas desde o início, e
+            testaríamos o assembly mais cedo, com as peças ainda simplificadas, para detetar erros antes de gastar tempo
+            no detalhe.</p>
         </div>
       </section>
 
@@ -179,4 +239,5 @@
   <script src="js/main.js"></script>
   <script src="js/extra.js"></script>
 </body>
+
 </html>

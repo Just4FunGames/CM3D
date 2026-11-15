@@ -87,3 +87,7 @@
 .cta p { opacity: .92; }
 .cta .btn { background: #fff; color: #14181f; }
 .cta .btn:hover { background: #14181f; color: #fff; }
+
+/* Espaço entre parágrafos e destaque do negrito nos blocos de texto */
+.callout p + p { margin-top: 14px; }
+.callout strong { color: var(--ink); }
