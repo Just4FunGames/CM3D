@@ -91,3 +91,26 @@
 /* Espaço entre parágrafos e destaque do negrito nos blocos de texto */
 .callout p + p { margin-top: 14px; }
 .callout strong { color: var(--ink); }
+
+/* ===== Fase 2: resumo em largura total, desafios, estratégia, conclusões ===== */
+.phead p { max-width: none; font-size: 1.1rem; line-height: 1.7; }
+.callout p + p { margin-top: 14px; }
+.callout strong { color: var(--ink); }
+.grid > .callout { max-width: none; }
+.callout .tag { display: block; margin-bottom: 8px; }
+
+.challenges { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; counter-reset: c; }
+.challenge { counter-increment: c; position: relative; background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--acc); border-radius: var(--r); padding: 58px 24px 24px; }
+.challenge::before { content: counter(c, decimal-leading-zero); position: absolute; top: 14px; left: 24px; font: 700 1.6rem var(--f-h); color: var(--acc); }
+.challenge p { color: var(--mut); }
+.challenge strong { display: block; color: var(--ink); font: 700 1.2rem var(--f-h); margin-bottom: 6px; }
+.challenge:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+.tools { margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.tools-label { font-weight: 600; margin-right: 10px; }
+.tools .pill { background: var(--card); color: var(--ink); }
+
+@media (max-width: 820px) { .challenges { grid-template-columns: 1fr; } }
+
+.callout.wide { max-width: none; }
+.tools { margin-top: 32px; }
